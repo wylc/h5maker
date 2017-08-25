@@ -9,4 +9,4 @@ const all = {
     },
     userRoles: ['guest', 'user', 'admin']
 }
-module.exports = all
+module.exports = all;
