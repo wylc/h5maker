@@ -4,15 +4,15 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('bmblog:server');
-var http = require('http');
+var app = require('../app')
+var debug = require('debug')('bmblog:server')
+var http = require('http')
 /**
  * Get port from environment and store in Express.
  */
 console.log(process.env.NODE_ENV, '当前环境');
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+var port = normalizePort(process.env.PORT || '3020')
+app.set('port', port)
 
 /**
  * Create HTTP server.

@@ -22,7 +22,6 @@ var UserSchema = new mongoose.Schema({
   token: String
 })
 
-
 /**
  * Validations
  */
@@ -106,7 +105,7 @@ UserSchema.methods = {
    * @return {Boolean}
    * @api public
    */
-  authenticate(password, callback) {
+  authenticate (password, callback) {
     if (!callback) {
       return this.password === this.encryptPassword(password)
     }
@@ -132,12 +131,12 @@ UserSchema.methods = {
    * @return {String}
    * @api public
    */
-  makeSalt(byteSize, callback) {
+  makeSalt (byteSize, callback) {
     var defaultByteSize = 16
 
     if (typeof arguments[0] === 'function') {
       callback = arguments[0]
-      byteSize = defaultByteSize;
+      byteSize = defaultByteSize
     } else if (typeof arguments[1] === 'function') {
       callback = arguments[1]
     } else {
@@ -165,7 +164,7 @@ UserSchema.methods = {
    * @return {String}
    * @api public
    */
-  encryptPassword(password, callback) {
+  encryptPassword (password, callback) {
     if (!password || !this.salt) {
       if (!callback) {
         return null

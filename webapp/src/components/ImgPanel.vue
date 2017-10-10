@@ -54,7 +54,7 @@ export default {
   background-size: contain;
   margin: 5px 5px;
   &:hover {
-    border: 2px solid #18ccc0;
+    border: 2px solid #cc1340;
     cursor: pointer;
   }
 }
